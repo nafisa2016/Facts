@@ -26,7 +26,7 @@ class FactsFeedViewModel {
     
     //MARK:- Get no of items
     func getNumOfItems() -> Int {
-        return factsFeedModel.rows.count
+        return factsFeedModel.rows!.count
     }
     
     //MARK:- Get nav bar title
@@ -36,17 +36,17 @@ class FactsFeedViewModel {
     
     //MARK:- Get cell title
     func getCellTitle(index: Int) -> String {
-        return factsFeedModel.rows[index].title ?? ""
+        return factsFeedModel.rows![index].title ?? ""
     }
     
     //MARK:- Get cell description
     func getCellDescription(index: Int) -> String {
-        return factsFeedModel.rows[index].description ?? ""
+        return factsFeedModel.rows![index].description ?? ""
     }
     
     //MARK:- Get Cell image href
     func getCellImgHref(index: Int) -> String {
-        return factsFeedModel.rows[index].imageHref ?? ""
+        return factsFeedModel.rows![index].imageHref ?? ""
     }
     
     //MARK:- Get facts feed
