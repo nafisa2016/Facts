@@ -19,6 +19,7 @@
 		786E966B20B7E6830057E103 /* DetailDataViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E966A20B7E6830057E103 /* DetailDataViewModelTests.swift */; };
 		786E966F20B7F3030057E103 /* GetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E966E20B7F3030057E103 /* GetImage.swift */; };
 		786E967220B7FDC80057E103 /* FactsFeedNetworkingHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E967120B7FDC80057E103 /* FactsFeedNetworkingHandlerTests.swift */; };
+		786E967420B7FEDA0057E103 /* FactsFeedCollectionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E967320B7FEDA0057E103 /* FactsFeedCollectionViewControllerTests.swift */; };
 		78FB633C20B7C03E00BAE957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB633B20B7C03E00BAE957 /* AppDelegate.swift */; };
 		78FB633E20B7C03E00BAE957 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB633D20B7C03E00BAE957 /* DetailViewController.swift */; };
 		78FB634120B7C03E00BAE957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78FB633F20B7C03E00BAE957 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		786E966A20B7E6830057E103 /* DetailDataViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataViewModelTests.swift; sourceTree = "<group>"; };
 		786E966E20B7F3030057E103 /* GetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImage.swift; sourceTree = "<group>"; };
 		786E967120B7FDC80057E103 /* FactsFeedNetworkingHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsFeedNetworkingHandlerTests.swift; sourceTree = "<group>"; };
+		786E967320B7FEDA0057E103 /* FactsFeedCollectionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsFeedCollectionViewControllerTests.swift; sourceTree = "<group>"; };
 		78FB633820B7C03E00BAE957 /* Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78FB633B20B7C03E00BAE957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78FB633D20B7C03E00BAE957 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		786E967520B7FF530057E103 /* ViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				786E967320B7FEDA0057E103 /* FactsFeedCollectionViewControllerTests.swift */,
+			);
+			path = ViewTests;
+			sourceTree = "<group>";
+		};
 		78FB632F20B7C03E00BAE957 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 				78FB635220B7C04000BAE957 /* Info.plist */,
 				786E966C20B7E6A40057E103 /* ModelTests */,
 				786E966D20B7E6B80057E103 /* ViewModelTests */,
+				786E967520B7FF530057E103 /* ViewTests */,
 			);
 			path = FactsTests;
 			sourceTree = "<group>";
@@ -357,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786E967420B7FEDA0057E103 /* FactsFeedCollectionViewControllerTests.swift in Sources */,
 				786E965B20B7CCB00057E103 /* DetailDataModelTests.swift in Sources */,
 				786E966B20B7E6830057E103 /* DetailDataViewModelTests.swift in Sources */,
 				786E965620B7C7C10057E103 /* FactsFeedModelTests.swift in Sources */,

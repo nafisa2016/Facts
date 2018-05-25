@@ -91,7 +91,7 @@
         <!--Facts Feed Collection View Controller-->
         <scene sceneID="PtH-uu-u35">
             <objects>
-                <collectionViewController id="EiT-zL-LyE" customClass="FactsFeedCollectionViewController" customModule="Facts" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="FactsFeedCollectionViewController" id="EiT-zL-LyE" customClass="FactsFeedCollectionViewController" customModule="Facts" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Pvx-aM-Oqj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
