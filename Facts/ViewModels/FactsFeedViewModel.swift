@@ -52,7 +52,7 @@ class FactsFeedViewModel {
     //MARK:- Get facts feed
     func getFactsFeed(completion: @escaping () -> Void){
         
-        factsFeedNetworkingHandler.getFeed { (feed) in
+        factsFeedNetworkingHandler.getFeedResponse { (feed) in
             
             DispatchQueue.main.async {
                 self.factsFeedModel = feed

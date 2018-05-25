@@ -18,9 +18,10 @@ class FactsFeedCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //set flow layout estimated size for dynamic cell sizing
+        //MARK:- set flow layout estimated size for dynamic cell sizing
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
+        
         if #available(iOS 10.0, *) {
             layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         } else {
@@ -47,23 +48,24 @@ class FactsFeedCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-     // MARK: - Navigation
+    
+     //MARK: Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using [segue destinationViewController].
      // Pass the selected object to the new view controller.
+        
+        
      }
-     */
     
-    // MARK: UICollectionViewDataSource
+    
+    //MARK:- UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return factsFeedViewModel.getNumOfSections()
     }
-    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
@@ -104,6 +106,7 @@ class FactsFeedCollectionViewController: UICollectionViewController {
     
 }
 
+//MARK:- conform to flow layout delegate
 extension FactsFeedCollectionViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
