@@ -14,10 +14,13 @@ class FactsFeedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var rowImgView: UIImageView!
     @IBOutlet weak var rowTitleLbl: UILabel!
     
+    //MARK:- configure cell
     func configure(rowTitle: String, rowImgLink : String) {
-        rowTitleLbl.text = rowTitle
+        
+        //populate row title label
+        self.rowTitleLbl.text = rowTitle
         
         //populate image
-        
+        self.rowImgView.getImage(contentMode: .scaleToFill, url: rowImgLink)
     }
 }
