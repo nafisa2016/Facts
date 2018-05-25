@@ -43,6 +43,12 @@ struct Row : Decodable {
         case imageHref
     }
     
+    init(title: String,description: String,imageHref: String) {
+        self.title = title
+        self.description = description
+        self.imageHref = imageHref
+    }
+    
     init(from decoder: Decoder) throws {
         
         let item = try decoder.container(keyedBy: CodingKeys.self)
