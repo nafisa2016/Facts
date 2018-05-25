@@ -18,6 +18,17 @@ class FactsFeedCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //set flow layout estimated size for dynamic cell sizing
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        if #available(iOS 10.0, *) {
+            layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
+        } else {
+            layout.estimatedItemSize = CGSize(width: (self.collectionView?.bounds.width)!, height: 150)
+        }
+        self.collectionView?.collectionViewLayout = layout
+        
+        //MARK:- load data
         if let collectionView = self.collectionView {
             //get facts feed
             factsFeedViewModel.getFactsFeed{ [weak self] in
@@ -91,4 +102,15 @@ class FactsFeedCollectionViewController: UICollectionViewController {
         }
     }
     
+}
+
+extension FactsFeedCollectionViewController : UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10.0
+    }
 }
