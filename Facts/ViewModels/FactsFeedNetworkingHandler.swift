@@ -10,4 +10,7 @@ import Foundation
 
 class FactsFeedNetworkingHandler {
     
+    func getFeed(completion: @escaping (FactsFeedModel) -> Void){
+        
+    }
 }

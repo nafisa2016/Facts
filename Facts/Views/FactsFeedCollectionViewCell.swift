@@ -11,8 +11,6 @@ import UIKit
 class FactsFeedCollectionViewCell: UICollectionViewCell {
     
     //MARK:- outlets
-    
     @IBOutlet weak var rowImgView: UIImageView!
-    
     @IBOutlet weak var rowTitleLbl: UILabel!
 }
