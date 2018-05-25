@@ -8,6 +8,8 @@
 
 import Foundation
 
+//MARK:- data model for first screen
+
 struct FactsFeedModel : Decodable {
     
     var title: String

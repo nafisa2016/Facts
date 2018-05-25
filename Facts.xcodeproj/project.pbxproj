@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		786E965620B7C7C10057E103 /* FactsFeedModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E965520B7C7C10057E103 /* FactsFeedModelTests.swift */; };
+		786E965920B7CBF70057E103 /* DetailDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E965820B7CBF70057E103 /* DetailDataModel.swift */; };
+		786E965B20B7CCB00057E103 /* DetailDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E965A20B7CCB00057E103 /* DetailDataModelTests.swift */; };
 		78FB633C20B7C03E00BAE957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB633B20B7C03E00BAE957 /* AppDelegate.swift */; };
 		78FB633E20B7C03E00BAE957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB633D20B7C03E00BAE957 /* ViewController.swift */; };
 		78FB634120B7C03E00BAE957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78FB633F20B7C03E00BAE957 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		786E965520B7C7C10057E103 /* FactsFeedModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsFeedModelTests.swift; sourceTree = "<group>"; };
+		786E965820B7CBF70057E103 /* DetailDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataModel.swift; sourceTree = "<group>"; };
+		786E965A20B7CCB00057E103 /* DetailDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataModelTests.swift; sourceTree = "<group>"; };
 		78FB633820B7C03E00BAE957 /* Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78FB633B20B7C03E00BAE957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78FB633D20B7C03E00BAE957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				78FB636920B7C0BB00BAE957 /* FactsFeedModel.swift */,
+				786E965820B7CBF70057E103 /* DetailDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			children = (
 				78FB635220B7C04000BAE957 /* Info.plist */,
 				786E965520B7C7C10057E103 /* FactsFeedModelTests.swift */,
+				786E965A20B7CCB00057E103 /* DetailDataModelTests.swift */,
 			);
 			path = FactsTests;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			files = (
 				78FB633E20B7C03E00BAE957 /* ViewController.swift in Sources */,
 				78FB633C20B7C03E00BAE957 /* AppDelegate.swift in Sources */,
+				786E965920B7CBF70057E103 /* DetailDataModel.swift in Sources */,
 				78FB636A20B7C0BB00BAE957 /* FactsFeedModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786E965B20B7CCB00057E103 /* DetailDataModelTests.swift in Sources */,
 				786E965620B7C7C10057E103 /* FactsFeedModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
