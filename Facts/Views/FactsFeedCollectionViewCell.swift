@@ -13,4 +13,11 @@ class FactsFeedCollectionViewCell: UICollectionViewCell {
     //MARK:- outlets
     @IBOutlet weak var rowImgView: UIImageView!
     @IBOutlet weak var rowTitleLbl: UILabel!
+    
+    func configure(rowTitle: String, rowImgLink : String) {
+        rowTitleLbl.text = rowTitle
+        
+        //populate image
+        
+    }
 }
