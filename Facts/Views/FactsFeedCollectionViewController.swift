@@ -25,7 +25,7 @@ class FactsFeedCollectionViewController: UICollectionViewController {
         if #available(iOS 10.0, *) {
             layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         } else {
-            layout.estimatedItemSize = CGSize(width: (self.collectionView?.bounds.width)!, height: 150)
+            layout.estimatedItemSize = CGSize(width: (self.collectionView?.bounds.width)!, height: 250)
         }
         self.collectionView?.collectionViewLayout = layout
         
@@ -37,6 +37,7 @@ class FactsFeedCollectionViewController: UICollectionViewController {
                 if let weakSelf = self {
                     weakSelf.setNavTitle(navTitle: weakSelf.factsFeedViewModel.getNavBarTitle())
                 }
+                collectionView.collectionViewLayout.invalidateLayout()
                 collectionView.reloadData()
             }
         }
