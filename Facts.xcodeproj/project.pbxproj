@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78604BD820B9773C0081FBD3 /* NavExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78604BD720B9773C0081FBD3 /* NavExtension.swift */; };
 		786E965620B7C7C10057E103 /* FactsFeedModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E965520B7C7C10057E103 /* FactsFeedModelTests.swift */; };
 		786E965920B7CBF70057E103 /* DetailDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E965820B7CBF70057E103 /* DetailDataModel.swift */; };
 		786E965B20B7CCB00057E103 /* DetailDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E965A20B7CCB00057E103 /* DetailDataModelTests.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78604BD720B9773C0081FBD3 /* NavExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavExtension.swift; sourceTree = "<group>"; };
 		786E965520B7C7C10057E103 /* FactsFeedModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsFeedModelTests.swift; sourceTree = "<group>"; };
 		786E965820B7CBF70057E103 /* DetailDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataModel.swift; sourceTree = "<group>"; };
 		786E965A20B7CCB00057E103 /* DetailDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataModelTests.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				786E966E20B7F3030057E103 /* GetImage.swift */,
+				78604BD720B9773C0081FBD3 /* NavExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			files = (
 				78FB633E20B7C03E00BAE957 /* DetailViewController.swift in Sources */,
 				78FB633C20B7C03E00BAE957 /* AppDelegate.swift in Sources */,
+				78604BD820B9773C0081FBD3 /* NavExtension.swift in Sources */,
 				786E966520B7CF100057E103 /* FactsFeedCollectionViewController.swift in Sources */,
 				786E966720B7CF600057E103 /* FactsFeedCollectionViewCell.swift in Sources */,
 				786E965920B7CBF70057E103 /* DetailDataModel.swift in Sources */,
