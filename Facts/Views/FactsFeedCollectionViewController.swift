@@ -25,7 +25,7 @@ class FactsFeedCollectionViewController: UICollectionViewController {
         if #available(iOS 10.0, *) {
             layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         } else {
-            layout.estimatedItemSize = CGSize(width: (self.collectionView?.bounds.width)!, height: 250)
+            layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
         }
         self.collectionView?.collectionViewLayout = layout
         

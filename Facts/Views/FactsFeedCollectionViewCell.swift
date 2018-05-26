@@ -18,6 +18,7 @@ class FactsFeedCollectionViewCell: UICollectionViewCell {
     func configure(rowTitle: String, rowImgLink : String) {
         
         //populate row title label
+        self.rowTitleLbl.preferredMaxLayoutWidth = 200
         self.rowTitleLbl.text = rowTitle
         
         //populate image
