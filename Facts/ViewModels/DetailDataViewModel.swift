@@ -12,6 +12,7 @@ class DetailDataViewModel {
     
     //MARK:- declarations
     var detailDataModel : DetailDataModel
+    weak var delegate : UpdateDetailData?
     
     init() {
        detailDataModel = DetailDataModel(rowTitle: "", rowImgHref: "", rowDescription: "")
@@ -25,6 +26,7 @@ class DetailDataViewModel {
     //MARK:- set rowTitle
     func setRowTitle(title: String) {
         detailDataModel.rowTitle = title
+        delegate?.updateDetailTitle()
     }
     
     //MARK:- get rowImgHref
@@ -45,6 +47,7 @@ class DetailDataViewModel {
     //MARK:- set rowDescription
     func setRowDescription(desc: String) {
         detailDataModel.rowDescription = desc
+        delegate?.updateDetailDesc()
     }
      
 }

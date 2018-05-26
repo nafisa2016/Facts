@@ -83,6 +83,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="dtlDescLbl" destination="UJL-o3-gG4" id="f2R-C6-c5k"/>
+                        <outlet property="dtlImgView" destination="MaW-x8-eEA" id="JGP-L9-bth"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,7 +157,9 @@
                             <outlet property="delegate" destination="EiT-zL-LyE" id="LVo-tb-7bm"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="BDI-nb-FuX"/>
+                    <navigationItem key="navigationItem" id="BDI-nb-FuX">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Cg6-2q-WB9"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeD-ti-mHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
