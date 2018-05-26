@@ -8,8 +8,10 @@
 
 import UIKit
 
+//MARK:- protocol declaration for updating detailed view from view model
 protocol UpdateDetailData : class {
     func updateDetailTitle()
+    func updateDetailImg()
     func updateDetailDesc()
 }
 
@@ -18,7 +20,7 @@ class DetailViewController: UIViewController {
     //MARK:- declarations
     lazy var detailDataViewModel = DetailDataViewModel()
     
-    var img : UIImage?  
+    var imgLink = ""
     var titleName = ""
     var desc  = ""
     
@@ -40,6 +42,7 @@ class DetailViewController: UIViewController {
     //MARK:- add passed data to view model
     func addToViewModel() {
         detailDataViewModel.setRowTitle(title: titleName)
+        detailDataViewModel.setRowImgHref(link: imgLink)
         detailDataViewModel.setRowDescription(desc: desc)
     }
     
@@ -48,17 +51,19 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
 }
 
+//MARK:- conform detail view controller to UpdateDetailData protocol
 extension DetailViewController : UpdateDetailData  {
     
     //MARK:- update detail title
     func updateDetailTitle() {
-        
         self.navigationItem.title = detailDataViewModel.getRowTitle()
-       // self.navigationItem.largeTitleDisplayMode
-        
+    }
+    
+    //MARK:- update image
+    func updateDetailImg() {
+        dtlImgView.getImage(contentMode: .scaleAspectFit, url: detailDataViewModel.getRowImgHref())
     }
     
     //MARK:- update detail desc

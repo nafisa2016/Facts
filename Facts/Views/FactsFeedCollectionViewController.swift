@@ -65,7 +65,7 @@ class FactsFeedCollectionViewController: UICollectionViewController {
                 
                 if let indexPath = index?.item {
                     
-                    //destinationVC.img =
+                    destinationVC.imgLink = factsFeedViewModel.getCellImgHref(index: indexPath)
                     destinationVC.titleName = factsFeedViewModel.getCellTitle(index: indexPath)
                     destinationVC.desc = factsFeedViewModel.getCellDescription(index: indexPath)
                 }

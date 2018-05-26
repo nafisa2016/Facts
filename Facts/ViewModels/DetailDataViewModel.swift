@@ -37,6 +37,7 @@ class DetailDataViewModel {
     //MARK:- set rowImgHref
     func setRowImgHref(link: String) {
         detailDataModel.rowImgHref = link
+        delegate?.updateDetailImg()
     }
     
     //MARK:- get rowDescription
