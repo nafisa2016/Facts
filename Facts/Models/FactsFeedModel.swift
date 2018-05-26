@@ -27,14 +27,14 @@ struct Row : Codable {
         self.imageHref = imageHref
     }
     
-//    init(from decoder: Decoder) throws {
-//
-//        let item = try decoder.container(keyedBy: CodingKeys.self)
-//
-//        title = try item.decodeIfPresent(String.self,forKey: .title)
-//        description = try item.decodeIfPresent(String.self,forKey: .description)
-//        imageHref = try item.decodeIfPresent(String.self,forKey: .imageHref)
-//    }
+    init(from decoder: Decoder) throws {
+
+        let item = try decoder.container(keyedBy: CodingKeys.self)
+
+        title = try item.decodeIfPresent(String.self,forKey: .title)
+        description = try item.decodeIfPresent(String.self,forKey: .description)
+        imageHref = try item.decodeIfPresent(String.self,forKey: .imageHref)
+    }
 }
 
 struct FactsFeedModel : Codable {
@@ -51,12 +51,12 @@ struct FactsFeedModel : Codable {
         case title
         case rows
     }
-//
-//    init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        title = try container.decode(String.self, forKey: .title)
-//        rows = try container.decode([Row].self, forKey: .rows)
-//    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        title = try container.decode(String.self, forKey: .title)
+        rows = try container.decode([Row].self, forKey: .rows)
+    }
     
 }
 

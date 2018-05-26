@@ -52,13 +52,25 @@ class FactsFeedViewModel {
     //MARK:- Get facts feed
     func getFactsFeed(completion: @escaping () -> Void){
         
-        factsFeedNetworkingHandler.getFeedResponse { (feed) in
-            
-            DispatchQueue.main.async {
-                self.factsFeedModel = feed
-                completion()
+        factsFeedNetworkingHandler.getFeedResponse { [weak self] (feed) in
+            if let weakSelf = self {
+                DispatchQueue.main.async {
+                    weakSelf.factsFeedModel = weakSelf.filterResult(responseData: feed)
+                    
+                    completion()
+                }
             }
+            
         }
+    }
+    
+    //MARK:- filter rows with empty title
+    func filterResult(responseData: FactsFeedModel) -> FactsFeedModel  {
+        
+        var filteredResponse = responseData
+        filteredResponse.rows = responseData.rows?.filter { $0.title != nil  }
+        return filteredResponse
+        
     }
     
 }

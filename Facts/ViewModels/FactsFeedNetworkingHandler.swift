@@ -37,10 +37,10 @@ class FactsFeedNetworkingHandler {
                     if response?.statusCode == 200{
                         print(responseData)
                         //call function to parse received JSON data
-                       var factsFeedModel = FactsFeedModel(title: "", rows: [])
+                        var factsFeedModel = FactsFeedModel(title: "", rows: [])
                         
                         
-                        //for testing
+                        //the json response is not encoded with UTF8 so JSON parsing is not successful - for testing the layout using the json response in a string and encoding with UTF8 and then decoding
                         let str =
                         """
     {
@@ -125,11 +125,11 @@ class FactsFeedNetworkingHandler {
                         if let factsdata = weakSelf.parseJSONData(jsonData: jsonData) {
                             factsFeedModel  = factsdata
                         }
-
                         
-//                        if let factsdata = weakSelf.parseJSONData(jsonData: responseData) {
-//                           factsFeedModel  = factsdata
-//                        }
+                        
+                        //                        if let factsdata = weakSelf.parseJSONData(jsonData: responseData) {
+                        //                           factsFeedModel  = factsdata
+                        //                        }
                         
                         completion(factsFeedModel)
                     }
@@ -139,7 +139,7 @@ class FactsFeedNetworkingHandler {
             })
             
             task.resume()
-        
+            
         }
     }
     
@@ -166,12 +166,12 @@ class FactsFeedNetworkingHandler {
             
             return responseData
             
-//            if let _: NSDictionary = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.allowFragments) as? NSDictionary
-//            {
-//                //return responseData
-//            }
-//
-//            return nil
+            //            if let _: NSDictionary = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.allowFragments) as? NSDictionary
+            //            {
+            //                //return responseData
+            //            }
+            //
+            //            return nil
             
         } catch {
             print("feed JSON parsing error")
