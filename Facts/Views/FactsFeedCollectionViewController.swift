@@ -77,7 +77,7 @@ class FactsFeedCollectionViewController: UICollectionViewController {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? FactsFeedCollectionViewCell {
             
             //configure cell
-            cell.configure(rowTitle: factsFeedViewModel.getCellDescription(index: indexPath.item), rowImgLink: factsFeedViewModel.getCellImgHref(index: indexPath.item))
+            cell.configure(rowTitle: factsFeedViewModel.getCellTitle(index: indexPath.item), rowImgLink: factsFeedViewModel.getCellImgHref(index: indexPath.item))
             return cell
             
         } else {

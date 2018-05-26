@@ -24,6 +24,10 @@ class FactsFeedCollectionViewCell: UICollectionViewCell {
         self.rowImgView.getImage(contentMode: .scaleToFill, url: rowImgLink)
     }
     
+    override func prepareForReuse() {
+        rowImgView.image = nil
+    }
+    
     //MARK:- dynamic layout
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         setNeedsLayout()
