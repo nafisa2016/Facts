@@ -41,7 +41,7 @@ class FactsFeedNetworkingHandler {
                         
                         
                         //for testing
-                        var str =
+                        let str =
                         """
     {
     "title":"About Canada",

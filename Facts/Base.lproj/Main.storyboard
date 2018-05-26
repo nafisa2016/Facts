@@ -111,18 +111,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="75e-LB-sCE">
-                                            <rect key="frame" x="10" y="18" width="230" height="250.5"/>
+                                            <rect key="frame" x="10" y="18" width="230" height="247"/>
                                             <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sk-eT-wkT" userLabel="rowTitle">
-                                            <rect key="frame" x="18" y="273.5" width="214" height="20.5"/>
+                                            <rect key="frame" x="18" y="270" width="214" height="24"/>
                                             <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="A7H-TO-Ou1"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="A7H-TO-Ou1">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                                </constraint>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                 </view>
