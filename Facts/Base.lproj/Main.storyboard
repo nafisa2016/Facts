@@ -29,7 +29,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="MaW-x8-eEA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="MaW-x8-eEA">
                                 <rect key="frame" x="10" y="74" width="394" height="576.66666666666663"/>
                                 <viewLayoutGuide key="safeArea" id="Cth-k5-9xT"/>
                             </imageView>
@@ -123,6 +123,7 @@
                     <connections>
                         <outlet property="dtlDescLbl" destination="UJL-o3-gG4" id="f2R-C6-c5k"/>
                         <outlet property="dtlImgView" destination="MaW-x8-eEA" id="JGP-L9-bth"/>
+                        <outlet property="lblBottomConstraint" destination="lhY-Gu-P1j" id="wxj-xc-RRf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

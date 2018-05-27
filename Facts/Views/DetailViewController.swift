@@ -27,6 +27,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var dtlImgView: UIImageView!
     @IBOutlet weak var dtlDescLbl: UILabel!
     
+    @IBOutlet weak var lblBottomConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -63,7 +65,20 @@ extension DetailViewController : UpdateDetailData  {
     
     //MARK:- update image
     func updateDetailImg() {
-        dtlImgView.getImage(contentMode: .scaleAspectFit, url: detailDataViewModel.getRowImgHref())
+        
+        if !imgLink.isEmpty {
+            dtlImgView.isHidden = false
+             dtlImgView.getImage(contentMode: .scaleAspectFit, url: detailDataViewModel.getRowImgHref())
+            
+        } else {
+            
+            dtlImgView.image = nil
+            dtlImgView.isHidden = true
+            lblBottomConstraint.constant = self.view.bounds.height / 2
+            self.view.layoutIfNeeded()
+            
+        }
+        
     }
     
     //MARK:- update detail desc
