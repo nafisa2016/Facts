@@ -15,6 +15,8 @@ class FactsFeedCollectionViewController: UICollectionViewController {
     //MARK:- declarations
     lazy var factsFeedViewModel = FactsFeedViewModel()
     
+    @IBOutlet weak var refreshBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,14 +34,7 @@ class FactsFeedCollectionViewController: UICollectionViewController {
         //MARK:- load data
         if let collectionView = self.collectionView {
             //get facts feed
-            factsFeedViewModel.getFactsFeed{ [weak self] in
-                
-                if let weakSelf = self {
-                    weakSelf.setNavTitle(navTitle: weakSelf.factsFeedViewModel.getNavBarTitle())
-                }
-                collectionView.collectionViewLayout.invalidateLayout()
-                collectionView.reloadData()
-            }
+            loadData()
             
             //refresh control
             if #available(iOS 10.0, *) {
@@ -52,35 +47,45 @@ class FactsFeedCollectionViewController: UICollectionViewController {
                 collectionView.alwaysBounceVertical = true
                 collectionView.refreshControl = refreshController
                 collectionView.addSubview(refreshController)
+                
+                refreshBtn.isEnabled = false
+                refreshBtn.tintColor = UIColor.clear
+                
+            } else {
+                refreshBtn.isEnabled = true
             }
         }
         
     }
     
+    //MARK:- load data
+    func loadData() {
+        //get facts feed
+        factsFeedViewModel.getFactsFeed{ [weak self] in
+            
+            if let weakSelf = self {
+                weakSelf.setNavTitle(navTitle: weakSelf.factsFeedViewModel.getNavBarTitle())
+                weakSelf.collectionView?.collectionViewLayout.invalidateLayout()
+                weakSelf.collectionView?.reloadData()
+            }
+        }
+    }
+    
     //MARK:- refresh data
     @objc func refresh() {
         
-        if let collectionView = self.collectionView {
-            //get facts feed
-            factsFeedViewModel.getFactsFeed{ [weak self] in
-                
-                if let weakSelf = self {
-                    //update nav bar title
-                    weakSelf.setNavTitle(navTitle: weakSelf.factsFeedViewModel.getNavBarTitle())
-                    
-                    //end refresh control
-                    if #available(iOS 10.0, *) { weakSelf.collectionView?.refreshControl?.endRefreshing()
-                    } else {
-                        // Fallback on earlier versions
-                    }
-                    
-                    collectionView.collectionViewLayout.invalidateLayout()
-                    collectionView.reloadData()
-                    
-                }
-                
-            }
+        //load data
+        loadData()
+        
+        //end refresh control
+        if #available(iOS 10.0, *) { collectionView?.refreshControl?.endRefreshing()
         }
+    }
+    
+    
+    //MARK:- press button to refresh data for versions previous to ios 10
+    @IBAction func refreshBtnPressed(_ sender: UIBarButtonItem) {
+        loadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -94,7 +99,7 @@ class FactsFeedCollectionViewController: UICollectionViewController {
     }
     
     
-    //MARK: Navigation
+    //MARK:- Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -114,13 +119,9 @@ class FactsFeedCollectionViewController: UICollectionViewController {
                     destinationVC.desc = factsFeedViewModel.getCellDescription(index: indexPath)
                 }
                 
-                
             }
         }
     }
-    
-    
-    
     
     //MARK:- UICollectionViewDataSource
     
