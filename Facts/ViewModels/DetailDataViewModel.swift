@@ -11,7 +11,7 @@ import Foundation
 class DetailDataViewModel {
     
     //MARK:- declarations
-    var detailDataModel : DetailDataModel
+    fileprivate var detailDataModel : DetailDataModel
     weak var delegate : UpdateDetailData?
     
     init() {

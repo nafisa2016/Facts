@@ -11,8 +11,8 @@ import Foundation
 class FactsFeedViewModel {
     
     //MARK:- declarations
-    var factsFeedNetworkingHandler: FactsFeedNetworkingHandler
-    var factsFeedModel : FactsFeedModel
+    fileprivate var factsFeedNetworkingHandler: FactsFeedNetworkingHandler
+    fileprivate var factsFeedModel : FactsFeedModel
     
     init(){
         factsFeedNetworkingHandler = FactsFeedNetworkingHandler()
