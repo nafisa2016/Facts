@@ -17,7 +17,7 @@ extension UIImage {
         let aspectRatio = imgWidth / imgHeight
         
         if imgWidth > UIScreen.main.bounds.width {
-            imgWidth = UIScreen.main.bounds.width - 100.0
+            imgWidth = UIScreen.main.bounds.width  - 40.0
             imgHeight = imgWidth * aspectRatio
         }
         

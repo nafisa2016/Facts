@@ -28,7 +28,7 @@ extension UIImageView {
                     weakSelf.contentMode =  contentMode
                     
                     if let data = data {
-                        //weakSelf.image = UIImage(data: data)
+                         //weakSelf.image = UIImage(data: data)
                         weakSelf.image = UIImage(data: data)?.resizeImage()
                         weakSelf.layoutIfNeeded()
                         weakSelf.setNeedsLayout()
