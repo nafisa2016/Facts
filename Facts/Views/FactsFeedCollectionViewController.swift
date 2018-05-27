@@ -65,8 +65,9 @@ class FactsFeedCollectionViewController: UICollectionViewController {
             
             if let weakSelf = self {
                 weakSelf.setNavTitle(navTitle: weakSelf.factsFeedViewModel.getNavBarTitle())
-                weakSelf.collectionView?.collectionViewLayout.invalidateLayout()
+            weakSelf.collectionView?.collectionViewLayout.invalidateLayout()
                 weakSelf.collectionView?.reloadData()
+                
             }
         }
     }
@@ -140,7 +141,8 @@ class FactsFeedCollectionViewController: UICollectionViewController {
             
             //configure cell
             cell.configure(rowTitle: factsFeedViewModel.getCellTitle(index: indexPath.item), rowImgLink: factsFeedViewModel.getCellImgHref(index: indexPath.item))
-            collectionView.reloadSections(IndexSet(integer: 0))
+           collectionView.reloadSections(IndexSet(integer: 0))
+//             collectionView.reloadItems(at: collectionView.indexPathsForVisibleItems)
             return cell
             
         } else {

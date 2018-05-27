@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78604BD820B9773C0081FBD3 /* NavExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78604BD720B9773C0081FBD3 /* NavExtension.swift */; };
+		78604BDA20BAE0F80081FBD3 /* ResizeImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78604BD920BAE0F80081FBD3 /* ResizeImg.swift */; };
 		786E965620B7C7C10057E103 /* FactsFeedModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E965520B7C7C10057E103 /* FactsFeedModelTests.swift */; };
 		786E965920B7CBF70057E103 /* DetailDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E965820B7CBF70057E103 /* DetailDataModel.swift */; };
 		786E965B20B7CCB00057E103 /* DetailDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786E965A20B7CCB00057E103 /* DetailDataModelTests.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		78604BD720B9773C0081FBD3 /* NavExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavExtension.swift; sourceTree = "<group>"; };
+		78604BD920BAE0F80081FBD3 /* ResizeImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImg.swift; sourceTree = "<group>"; };
 		786E965520B7C7C10057E103 /* FactsFeedModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsFeedModelTests.swift; sourceTree = "<group>"; };
 		786E965820B7CBF70057E103 /* DetailDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataModel.swift; sourceTree = "<group>"; };
 		786E965A20B7CCB00057E103 /* DetailDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataModelTests.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				786E966E20B7F3030057E103 /* GetImage.swift */,
 				78604BD720B9773C0081FBD3 /* NavExtension.swift */,
+				78604BD920BAE0F80081FBD3 /* ResizeImg.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				786E966320B7CE620057E103 /* DetailDataViewModel.swift in Sources */,
 				786E966F20B7F3030057E103 /* GetImage.swift in Sources */,
 				786E965D20B7CDF50057E103 /* FactsFeedViewModel.swift in Sources */,
+				78604BDA20BAE0F80081FBD3 /* ResizeImg.swift in Sources */,
 				786E966120B7CE3E0057E103 /* FactsFeedNetworkingHandler.swift in Sources */,
 				78FB636A20B7C0BB00BAE957 /* FactsFeedModel.swift in Sources */,
 			);

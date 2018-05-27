@@ -24,6 +24,7 @@ class FactsFeedCollectionViewCell: UICollectionViewCell {
          
         //populate image
         self.rowImgView.getImage(contentMode: .scaleToFill, url: rowImgLink)
+        
     }
     
     override func prepareForReuse() {
@@ -48,8 +49,9 @@ class FactsFeedCollectionViewCell: UICollectionViewCell {
             } else if UIDevice.current.orientation == .landscapeLeft  || UIDevice.current.orientation == .landscapeRight{
                 aspectRatio = size.height / size.width
             }
+            size.width = UIScreen.main.bounds.width  
             
-            size.width = UIScreen.main.bounds.width -  self.layoutMargins.left - self.layoutMargins.right
+            //size.width = UIScreen.main.bounds.width -  2 * self.layoutMargins.left - 2 * self.layoutMargins.right
             size.height = aspectRatio * size.width
         }
         
