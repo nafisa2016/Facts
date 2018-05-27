@@ -42,6 +42,42 @@ class FactsFeedCollectionViewController: UICollectionViewController {
             }
         }
         
+        //refresh control
+        if #available(iOS 10.0, *) {
+            
+            let refreshController:UIRefreshControl = UIRefreshControl()
+            refreshController.attributedTitle = NSAttributedString(string: "Pull to refresh",attributes:nil )
+            refreshController.addTarget(self, action: #selector(self.refresh), for: UIControlEvents.valueChanged)
+            collectionView?.refreshControl = refreshController
+            collectionView?.addSubview(refreshController)
+        }
+        
+    }
+    
+    //MARK:- refresh data
+    @objc func refresh() {
+        
+        if let collectionView = self.collectionView {
+            //get facts feed
+            factsFeedViewModel.getFactsFeed{ [weak self] in
+                
+                if let weakSelf = self {
+                    //update nav bar title
+                    weakSelf.setNavTitle(navTitle: weakSelf.factsFeedViewModel.getNavBarTitle())
+                    
+                    //end refresh control
+                    if #available(iOS 10.0, *) { weakSelf.collectionView?.refreshControl?.endRefreshing()
+                    } else {
+                        // Fallback on earlier versions
+                    }
+                    
+                    collectionView.collectionViewLayout.invalidateLayout()
+                    collectionView.reloadData()
+                    
+                }
+                
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
