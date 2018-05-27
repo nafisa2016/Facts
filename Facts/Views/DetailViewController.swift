@@ -99,5 +99,6 @@ extension DetailViewController : UpdateDetailData  {
     //MARK:- update detail desc
     func updateDetailDesc() {
         dtlDescLbl.text = detailDataViewModel.getRowDescription()
+        dtlDescLbl.sizeToFit()
     }
 }
