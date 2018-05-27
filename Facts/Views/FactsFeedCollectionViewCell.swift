@@ -33,6 +33,9 @@ class FactsFeedCollectionViewCell: UICollectionViewCell {
     //MARK:- dynamic layout
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         
+        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+        self.contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
         var size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
         var frame = layoutAttributes.frame
         
