@@ -40,16 +40,19 @@ class FactsFeedCollectionViewController: UICollectionViewController {
                 collectionView.collectionViewLayout.invalidateLayout()
                 collectionView.reloadData()
             }
-        }
-        
-        //refresh control
-        if #available(iOS 10.0, *) {
             
-            let refreshController:UIRefreshControl = UIRefreshControl()
-            refreshController.attributedTitle = NSAttributedString(string: "Pull to refresh",attributes:nil )
-            refreshController.addTarget(self, action: #selector(self.refresh), for: UIControlEvents.valueChanged)
-            collectionView?.refreshControl = refreshController
-            collectionView?.addSubview(refreshController)
+            //refresh control
+            if #available(iOS 10.0, *) {
+                
+                let refreshController:UIRefreshControl = UIRefreshControl()
+                
+                refreshController.attributedTitle = NSAttributedString(string: "Pull to refresh",attributes:nil )
+                refreshController.tintColor = UIColor.blue
+                refreshController.addTarget(self, action: #selector(self.refresh), for: UIControlEvents.valueChanged)
+                collectionView.alwaysBounceVertical = true
+                collectionView.refreshControl = refreshController
+                collectionView.addSubview(refreshController)
+            }
         }
         
     }
