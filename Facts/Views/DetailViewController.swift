@@ -24,10 +24,12 @@ class DetailViewController: UIViewController {
     var titleName = ""
     var desc  = ""
     
+    @IBOutlet weak var dtlLblTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var dtlImgView: UIImageView!
     @IBOutlet weak var dtlDescLbl: UILabel!
     
     @IBOutlet weak var lblBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var lblTrailingConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,11 +73,24 @@ extension DetailViewController : UpdateDetailData  {
              dtlImgView.getImage(contentMode: .scaleAspectFit, url: detailDataViewModel.getRowImgHref())
             
         } else {
+            if UIDevice.current.orientation == .portrait ||  UIDevice.current.orientation == .portraitUpsideDown {
+                
+                dtlImgView.image = nil
+                dtlImgView.isHidden = true
+                lblBottomConstraint.constant = self.view.bounds.height / 2
+                self.view.layoutIfNeeded()
+                
+            } else if UIDevice.current.orientation == .landscapeLeft ||
+                      UIDevice.current.orientation == .landscapeRight {
+                
+                dtlImgView.image = nil
+                dtlImgView.isHidden = true
+                lblTrailingConstraint.constant = self.view.bounds.width  / 2
+                dtlLblTopConstraint.constant = 0
+                
+                self.view.layoutIfNeeded()
+            }
             
-            dtlImgView.image = nil
-            dtlImgView.isHidden = true
-            lblBottomConstraint.constant = self.view.bounds.height / 2
-            self.view.layoutIfNeeded()
             
         }
         
