@@ -15,5 +15,13 @@ extension UINavigationController {
         
         return [.all]
     }
+    
+    override open func overrideTraitCollection(forChildViewController childViewController: UIViewController) -> UITraitCollection? {
+        
+        if UIDevice.current.userInterfaceIdiom == .pad && UIDevice.current.orientation.isLandscape {
+            return UITraitCollection(traitsFrom:[UITraitCollection(verticalSizeClass: .compact), UITraitCollection(horizontalSizeClass: .regular)])
+        }
+        return super.overrideTraitCollection(forChildViewController: childViewController)
+    }
 }
 

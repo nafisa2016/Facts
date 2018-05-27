@@ -30,6 +30,7 @@ extension UIImageView {
                     if let data = data {
                         weakSelf.image = UIImage(data: data)
                         weakSelf.layoutIfNeeded()
+                        weakSelf.setNeedsLayout()
                     }
                 }
                 

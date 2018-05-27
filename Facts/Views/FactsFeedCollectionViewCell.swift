@@ -14,13 +14,14 @@ class FactsFeedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var rowImgView: UIImageView!
     @IBOutlet weak var rowTitleLbl: UILabel!
     
+
     //MARK:- configure cell
     func configure(rowTitle: String, rowImgLink : String) {
         
         //populate row title label
         self.rowTitleLbl.preferredMaxLayoutWidth = 200
         self.rowTitleLbl.text = rowTitle
-        
+         
         //populate image
         self.rowImgView.getImage(contentMode: .scaleToFill, url: rowImgLink)
     }
@@ -31,8 +32,6 @@ class FactsFeedCollectionViewCell: UICollectionViewCell {
     
     //MARK:- dynamic layout
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        setNeedsLayout()
-        layoutIfNeeded()
         
         var size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
         var frame = layoutAttributes.frame
@@ -54,6 +53,11 @@ class FactsFeedCollectionViewCell: UICollectionViewCell {
         frame.size = size
         layoutAttributes.frame = frame
         
+        setNeedsLayout()
+        layoutIfNeeded()
+        
         return layoutAttributes
     }
+    
+    
 }
