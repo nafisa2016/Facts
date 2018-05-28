@@ -14,7 +14,7 @@ extension UIImageView {
     func getImage(contentMode: UIViewContentMode,url : String){
         
         guard let imgUrl = URL(string: url) else {
-            print("can't create URL")
+            print("can't create Img URL \(url)")
             return
         }
         

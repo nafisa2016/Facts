@@ -22,13 +22,19 @@ class FactsFeedCollectionViewCell: UICollectionViewCell {
         self.rowTitleLbl.preferredMaxLayoutWidth = 200
         self.rowTitleLbl.text = rowTitle
         
-        if let cachedImage = imageCache.object(forKey: rowImgLink as NSString) {
-            
-        } else {
-            //populate image
+        //populate image
+        if !rowImgLink.isEmpty {
             self.rowImgView.getImage(contentMode: .scaleAspectFit, url: rowImgLink)
-//            imageCache.setObject(self.rowImgView.image!, forKey: rowImgLink as NSString)
         }
+        
+  //NSCache to be implemented later
+//        if let cachedImage = imageCache.object(forKey: rowImgLink as NSString) {
+//
+//        } else {
+//            //populate image
+//            self.rowImgView.getImage(contentMode: .scaleAspectFit, url: rowImgLink)
+////            imageCache.setObject(self.rowImgView.image!, forKey: rowImgLink as NSString)
+//        }
         
     }
     
