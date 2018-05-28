@@ -137,8 +137,10 @@ class FactsFeedNetworkingHandler {
                 } //weak self
                 
             })
+            DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async(execute: {
+                task.resume()
+            })
             
-            task.resume()
             
         }
     }

@@ -18,7 +18,7 @@ extension UIImageView {
             return
         }
         
-        URLSession.shared.dataTask( with: imgUrl, completionHandler: { [weak self]
+        let task = URLSession.shared.dataTask( with: imgUrl, completionHandler: { [weak self]
             (data, response, error) -> Void in
             
             if let weakSelf = self {
@@ -37,7 +37,11 @@ extension UIImageView {
                 
             }
             
-        }).resume()
+        })
+            
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async(execute: {
+            task.resume()
+        })
         
     }
         
